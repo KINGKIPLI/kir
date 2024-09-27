@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Kipli</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="warung.jpg" type="image/x-icon">
+</head>
+<body>
+   <style> 
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+     h2 {
+        color: #00796b;
+    }
+    
+    .product-list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product {
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        background-color: #f1f1f1;
+    }
+    
+    button {
+        background-color: #00796b;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #005f50;
+    }
+    
+    #cart {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        background-color: #e8f5e9;
+    } 
+    .gambar{
+        background-color: #005f50;
+        display: flex;
+        width: 53%;
+        height: 250px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    img{
+        border-radius: 10px;
+        
+    }
+    .warung {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        
+        
+ 
+        
+    }
+    .warung img {
+    width: 300px;
+    border-radius: 50%;
+    }
+
+    footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #757575;
+            background-color:#ced4da;
+            border-radius: 10px;
+        }
+        
+        .H1 {
+        justify-content: center;
+        display: flex
+        
+
+        }
+        .H1{
+            background-color: rgb(15, 97, 97);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px
+        }
+        
+     .pembayaran{
+        display: flex;
+        justify-content: center;
+     }
+     
+    </style>
+
+    <div class="container">
+      <div class="H1"><h1>WARUNG KIPLI</h1></div>
+      <div class="warung"> <img src="warung.jpg" alt=""> </div>
+        <div class="product-list" id="product-list">
+            <div class="product">
+                <h2>PECEL AYAM</h2>
+                <p>Harga: Rp. 18.000</p>
+                <button onclick="addToCart('PECEL AYAM', 18000)">Tambah ke Keranjang</button>
+                <div class="gambar">
+                <img src="pecel ayam.jpg" alt="PECEL AYAM" >
+                </div>
+            </div>
+            <div class="product">
+                <h2>PECEL LELE</h2>
+                <p>Harga: Rp. 15.000</p>
+                <button onclick="addToCart('PECEL LELE', 15000)">Tambah ke Keranjang</button>
+                <div class="gambar"><img src="pecel lele.jpg" alt=""></div>
+            </div>
+            <div class="product">
+                <h2>PECEL BEBEK BAKAR</h2>
+                <p>Harga: Rp. 20.000</p>
+                <button onclick="addToCart('BEBEK BAKAR', 20000)">Tambah ke Keranjang</button>
+                <div class="gambar"><img src="bebek bakar.jpg" alt=""></div>
+            </div>
+            <div class="product">
+                <h2>PECEL AYAM BAKAR</h2>
+                <p>Harga: Rp. 20.000</p>
+                <button onclick="addToCart('AYAM BAKAR', 20000)">Tambah ke Keranjang</button>
+               <div class="gambar"> <img src="ayam bakar.jpg" alt="" width="350"> </div>
+            </div>
+            <div class="product">
+                <h2>IKAN BAKAR</h2>
+                <p>Harga: Rp. 25.000</p>
+                <button onclick="addToCart('IKAN BAKAR', 25000)">Tambah ke Keranjang</button>
+               <div class="gambar"> <img src="ikan bakar.jpg" alt="" width="350"> </div>
+            </div>
+            <div class="product">
+                <h2>ESTEH KIPLI</h2>
+                <p>Harga: Rp. 5.000</p>
+                <button onclick="addToCart('ESTEH KIPLI', 5000)">Tambah ke Keranjang</button>
+              <div class="gambar"> <img src="ESTEH KIPLI.jpg" alt=""> </div>
+            </div>
+            <div class="product">
+                <h2>ES KOPI EMYU</h2>
+                <p>Harga: Rp. 10.000</p>
+                <button onclick="addToCart('KOPI EMYU', 10000)">Tambah ke Keranjang</button>
+              <div class="gambar">   <img src="kopi.jpg" alt=""></div>
+            </div>
+            <div class="product">
+                <h2>ES JERUK UEL (Khusus Malam Jum'at)</h2>
+                <p>Harga: Rp. 10.000</p>
+                <button onclick="addToCart('ES JERUK UEL', 10000)">Tambah ke Keranjang</button>
+              <div class="gambar">  <img src="es jeruk.jpg" alt=""></div>
+            </div>
+            <div class="product">
+                <h2>NASI UDUK (NAMBAH)</h2>
+                <p>Harga: Rp. 5.000</p>
+                <button onclick="addToCart('NASI UDUK', 5000)">Tambah ke Keranjang</button>
+               <div class="gambar"> <img src="nasi ududk.jpg" alt="" width="200" height="200"> </div>
+            </div>
+            <div class="product">
+                <h2>NASI BIASA (NAMBAH)</h2>
+                <p>Harga: Rp. 5.000</p>
+                <button onclick="addToCart('NASI BIASA', 5000)">Tambah ke Keranjang</button>
+               <div  class="gambar"> <img src="nasi.jpg" alt="" > </div>
+            </div>
+            <div class="product">
+                <h2>NASI BAKAR</h2>
+                <p>Harga: Rp. 8.000</p>
+                <button onclick="addToCart('NASI BAKAR', 8000)">Tambah ke Keranjang</button>
+               <div class="gambar"> <img src="nasi bakar.jpg" alt=""></div>
+            </div>
+        </div>
+        <h2>Keranjang Belanja</h2>
+        <div id="cart"></div>
+        <div id="total" style="margin-top: 5px;"></div>
+    </div>
+    <script>
+        let cart = [];
+let total = 0;
+
+function addToCart(productName, price ,footer) {
+    cart.push({ name: productName, price: price, footer: footer,});
+    total += price, footer;
+    updateCart();
+}
+
+
+function updateCart() {
+    const cartDiv = document.getElementById('cart');
+    cartDiv.innerHTML = '<h3>Isi Keranjang:</h3>';
+    
+    cart.forEach(item => {
+        cartDiv.innerHTML += `<p>${item.name} - Rp. ${item.price}</p>`;
+    });
+    
+    document.getElementById('total').innerHTML = `<strong>Total: Rp. ${total}</strong>`;
+}
+
+
+    </script>
+
+    <script src="script.js"></script>
+ <div class="pembayaran" style="margin-top: 5px;"> <button type="submit" onclick="window.location.href='pembayaran.html'">Lanjut Pembayaran</button> </div>
+</body>
+</html>
