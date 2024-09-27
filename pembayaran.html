@@ -105,6 +105,7 @@ button:hover {
             <button type="submit">Bayar</button>
 
  <div id="countdown" style="text-align: center;font-size: 20px; margin-top: 20px;">1h 00m 00s</div>
+ <div id="timeout" style="text-align: center;"></div>
         </form>
         <div id="message"></div>
        
@@ -127,6 +128,7 @@ button:hover {
         
 let countdown = document.getElementById("countdown");
 let time = 3599;
+let waitTime = 60;
 
 setInterval(function() {
     let minutes = Math.floor(time / 60);
@@ -139,7 +141,13 @@ setInterval(function() {
     if (time < 0) {
         clearInterval();
         document.getElementById("countdown").innerHTML = 'EXPIRED'
+        setTimeout(() => {
+        document.getElementById("timeout").innerHTML = 'Waktu tersisa 1 menit, silahkan balik ke homepage'
+        }, 500)
+        setTimeout(() => {
         window.location.href = "index.html";
+        }, waitTime * 1000)
+        
 
   }
 
